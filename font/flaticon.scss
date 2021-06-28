@@ -1,0 +1,37 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?51d0381ff0165c0a252eac191eb3c70e") format("truetype"),
+url("./flaticon.woff?51d0381ff0165c0a252eac191eb3c70e") format("woff"),
+url("./flaticon.woff2?51d0381ff0165c0a252eac191eb3c70e") format("woff2"),
+url("./flaticon.eot?51d0381ff0165c0a252eac191eb3c70e#iefix") format("embedded-opentype"),
+url("./flaticon.svg?51d0381ff0165c0a252eac191eb3c70e#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "facebook": "\f101",
+    "instagram": "\f102",
+    "twitter-sign": "\f103",
+);
+
+.flaticon-facebook:before {
+    content: map-get($flaticon-map, "facebook");
+}
+.flaticon-instagram:before {
+    content: map-get($flaticon-map, "instagram");
+}
+.flaticon-twitter-sign:before {
+    content: map-get($flaticon-map, "twitter-sign");
+}
